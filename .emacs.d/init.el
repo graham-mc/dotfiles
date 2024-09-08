@@ -1,0 +1,11 @@
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(load-theme 'deeper-blue t)
+(set-face-attribute 'default nil :height 110)
+(setq inhibit-startup-screen t)
+(blink-cursor-mode 0)
+
+(require 'org)
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
+(setq org-todo-keywords '((sequence "TODO" "DOING" "DONE")))

@@ -11,6 +11,9 @@
     (set-face-attribute 'default nil :height 150))
   ((eq system-type 'gnu/linux)
     (set-face-attribute 'default nil :height 110)))
+(cond
+  ((eq system-type 'darwin)
+    (setq ns-right-alternate-modifier (quote none))))
 
 ; Org
 (use-package org

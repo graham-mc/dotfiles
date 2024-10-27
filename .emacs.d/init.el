@@ -3,6 +3,7 @@
 (load-theme 'deeper-blue t)
 (setq inhibit-startup-screen t)
 (tool-bar-mode -1)
+(scroll-bar-mode -1)
 (blink-cursor-mode 0)
 (setq ring-bell-function 'ignore)
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
@@ -14,6 +15,12 @@
 (cond
   ((eq system-type 'darwin)
     (setq ns-right-alternate-modifier (quote none))))
+
+; Ace Window
+(use-package ace-window
+  :ensure t)
+(global-set-key (kbd "M-o") 'ace-window)
+(setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
 
 ; Org
 (use-package org
@@ -33,3 +40,4 @@
 ; Magit
 (use-package magit
   :ensure t)
+(custom-set-variables

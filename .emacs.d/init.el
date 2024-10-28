@@ -40,4 +40,3 @@
 ; Magit
 (use-package magit
   :ensure t)
-(custom-set-variables

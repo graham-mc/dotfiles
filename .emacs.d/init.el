@@ -7,6 +7,7 @@
 (blink-cursor-mode 0)
 (setq ring-bell-function 'ignore)
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
+(setq suggest-key-bindings 5)
 (cond
   ((eq system-type 'darwin)
     (set-face-attribute 'default nil :height 150))

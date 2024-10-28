@@ -33,11 +33,11 @@
 
 ; Ivy
 (use-package counsel
-  :ensure t
-  :commands ivy-mode)
+  :ensure t)
+(ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 (setq ivy-count-format "(%d/%d) ")
 
 ; Magit
 (use-package magit
-  :ensure t)
+   :ensure t)

@@ -4,6 +4,7 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (blink-cursor-mode 0)
+(winner-mode 1)
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 (add-hook 'text-mode-hook 'auto-fill-mode)
 (setq ring-bell-function 'ignore)

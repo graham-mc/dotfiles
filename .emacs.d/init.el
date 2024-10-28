@@ -1,12 +1,13 @@
 ; Defaults
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'deeper-blue t)
-(setq inhibit-startup-screen t)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (blink-cursor-mode 0)
-(setq ring-bell-function 'ignore)
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
+(add-hook 'text-mode-hook 'auto-fill-mode)
+(setq ring-bell-function 'ignore)
+(setq inhibit-startup-screen t)
 (setq suggest-key-bindings 5)
 (cond
   ((eq system-type 'darwin)
@@ -26,10 +27,13 @@
 ; Org
 (use-package org
   :ensure t)
+(add-hook 'org-mode-hook 'auto-fill-mode)
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
 (setq org-todo-keywords '((sequence "TODO" "DOING" "DONE")))
+(setq org-todo-keyword-faces
+      '(("DOING" . (:inherit warning :weight bold))))
 
 ; Ivy
 (use-package counsel

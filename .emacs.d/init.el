@@ -46,3 +46,7 @@
 ; Magit
 (use-package magit
   :ensure t)
+
+; Rust
+(use-package rust-mode
+  :ensure t)

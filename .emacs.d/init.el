@@ -1,5 +1,3 @@
-;;; Crafted Emacs
-
 ;; This assumes you cloned Crafted Emacs in you home directory.
 (load "~/crafted-emacs/modules/crafted-init-config")
 (package-install-selected-packages :noconfirm)
@@ -9,25 +7,12 @@
 (package-install-selected-packages :noconfirm)
 (require 'crafted-completion-config)
 
-;;; Personal Defaults
-
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-(load-theme 'deeper-blue t)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
 (blink-cursor-mode 0)
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 (add-hook 'text-mode-hook 'auto-fill-mode)
 (setq ring-bell-function 'ignore)
 (setq inhibit-startup-screen t)
 (setq suggest-key-bindings 5)
-(cond
- ((eq system-type 'darwin)
-  (set-face-attribute 'default nil :height 150))
- ((eq system-type 'gnu/linux)
-  (set-face-attribute 'default nil :height 110)))
-
-;;; Personal Packages
 
 ;; Ace Window
 (use-package ace-window
@@ -53,4 +38,3 @@
 ;; Rust
 (use-package rust-mode
   :ensure t)
-
